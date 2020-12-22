@@ -1,0 +1,157 @@
+/*CENTERED*/
+.parent1{
+	display: grid;
+	align-items: center;
+	/* só para ver o fundo*/
+	padding: 25px;
+	background-color: black;
+
+}
+.son1{
+	background-color: purple;
+	width: 300px;
+	height: 300px;
+	/* aqui que define o ficar no meio da tela*/
+	margin-left: auto;
+	margin-right: auto;
+}
+/*DECONS. PANCAKE*/
+.parent2{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* só para ver o fundo*/
+	padding: 25px;
+	background-color: black;
+
+}
+.son2{
+	background-color: purple;
+	/* flex: x x (base width) */;
+	flex: 1 1 150px; /* streching and keepin the same alt x lar */
+	flex: 0 1 150px; /* no streching and not keepin the alt x lar */
+	margin: 5px;
+}
+/*SIDEBAR*/
+.parent3{
+	display: grid;
+	grid-template-columns: minmax(150px, 25%) 1fr;
+	/* só para ver o fundo*/
+	padding: 25px;
+	background-color: black;
+
+}
+.sidebar{
+	background-color: purple;
+
+}
+.son3{
+	background-color: crimson;
+}
+/* */
+.parent4{
+	display: grid;
+	grid-template-rows: auto 1fr auto;/* is saying the first and las row don change */
+	/* só para ver o fundo*/
+	padding: 25px;
+	background-color: black;
+
+}
+.header,
+.footer{
+	background-color: purple;
+
+}
+.main{
+	background-color: crimson;
+}
+/* */
+.parent5{
+	display: grid;
+	grid-template: auto 1fr / auto auto 1fr auto;/* is saying the first and last row don change 
+	and row x column */
+	/* só para ver o fundo*/
+	padding: 25px;
+	background-color: black;
+
+}
+.header,
+.footer{
+	background-color: purple;
+	padding: 2rem;
+}
+.left_side,
+.right_side{
+	background-color: blue;
+}
+.main{
+	background-color: crimson;
+	grid-column: 2/3;
+}
+.header{
+	grid-column: 1/4;
+}
+.left_side{
+	grid-column: 1/2;
+}
+.right_side{
+	grid-column: 3/4;
+}
+.footer{
+	grid-column: 1/4;
+}
+/* */
+.parent6{
+	display: grid;
+	grid-gap: 1rem;
+	/* auto-fill also */
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	/* just for view */
+	padding: 25px;
+	background-color: black;
+
+}
+.item1{
+	background-color: crimson;
+	width: 150px;
+	height: 150px;
+}
+/* */
+.parent7{
+	height: auto;
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(3, 1fr);
+	background-color: black;
+	padding: 5px;
+}
+.item2{
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	justify-content: space-between;
+	background-color: crimson;
+}
+.inside_item{
+	height: 100px;
+	width: 100%;
+	background-color: green;
+}
+/* */
+.parent8{
+	display: grid;
+	align-items:center;
+	background-color: black;
+	padding: 5px;
+}
+.card{
+	width:50%;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	background-color: yellow;
+}
+.inside_card{
+	padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+	background-color: green;
+}
